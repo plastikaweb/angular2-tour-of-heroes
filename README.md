@@ -1,4 +1,4 @@
-# angular2 quickstart
+# Angular 2 Tour of Heroes
 
 ## Getting started
 
