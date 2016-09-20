@@ -1,12 +1,18 @@
-// Every Angular application has at least one component:
-// the root component, named AppComponent here.
-//
-// Components are the basic building blocks of Angular applications.
-// A component controls a portion of the screen—a view—through its associated template.
-import { Component }         from '@angular/core';
-
+import {Component}         from '@angular/core';
+export class Hero {
+    id: number;
+    name: string;
+}
 @Component({
     selector: 'my-app',
-    template: '<h1>My first Angular 2 App</h1>'
+    template: '<h1>{{ title }}</h1>' +
+    '<h2>{{ hero.name }} details!</h2>'
 })
-export class AppComponent { }
+
+export class AppComponent {
+    title = 'Tour of Heroes';
+    hero: Hero = {
+        id: 1,
+        name: 'Widnstorm'
+    }
+}
