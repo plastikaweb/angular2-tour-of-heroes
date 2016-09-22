@@ -5,13 +5,15 @@ import {Hero} from "./hero";
 
 @Component({
     selector: 'my-hero-detail',
-    templateUrl: 'app/hero-detail.component.html'
+    templateUrl: 'app/hero-detail.component.html',
+    styleUrls: ['app/hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
     constructor(private heroService: HeroService,
                 private route: ActivatedRoute) {
 
     }
+
     @Input hero: Hero;
 
     ngOnInit(): void {
